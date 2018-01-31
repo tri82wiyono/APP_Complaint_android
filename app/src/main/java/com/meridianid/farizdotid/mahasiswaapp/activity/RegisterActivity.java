@@ -51,8 +51,19 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
-                requestRegister();
+                if (etNama.getText().toString().length() == 0) {
+                    //jika form Nama belum di isi / masih kosong
+                    etNama.setError("Nama Tidak Boleh Kosong!");
+                } else if (etEmail.getText().toString().length() == 0) {
+                    //jika form Email belum di isi / masih kosong
+                    etEmail.setError("Email Tidak Boleh Kosong!");
+                } else if (etPassword.getText().toString().length() == 0) {
+                    //jika form Password belum di isi / masih kosong
+                    etPassword.setError("Password Tidak Boleh Kosong!");
+                } else {
+                    loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
+                    requestRegister();
+                }
             }
         });
     }
