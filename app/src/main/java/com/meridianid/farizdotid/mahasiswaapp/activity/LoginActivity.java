@@ -28,6 +28,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.R.attr.password;
+
 public class LoginActivity extends AppCompatActivity {
 
     @BindView(R.id.etEmail) EditText etEmail;
@@ -55,15 +57,27 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
-                requestLogin();
+                if (etEmail.getText().toString().length() == 0) {
+                    //jika form Email belum di isi / masih kosong
+                    etEmail.setError("Email Tidak Boleh Kosong!");
+                } else if (etPassword.getText().toString().length() == 0) {
+                    //jika form Username belum di isi / masih kosong
+                    etPassword.setError("Password Tidak Boleh Kosong!");
+                } else {
+                    loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
+                    requestLogin();
+                }
             }
         });
+
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, RegisterActivity.class));
+
+                    startActivity(new Intent(mContext, RegisterActivity.class));
+
             }
         });
 

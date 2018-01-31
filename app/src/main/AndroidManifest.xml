@@ -30,7 +30,7 @@
         <activity android:name=".activity.TambahMatkulActivity2" />
         <activity android:name=".activity.KantorActivity" />
         <activity android:name=".activity.ATMActivity" />
-        <activity android:name=".activity.ChangeProfileActivity"></activity>
+        <activity android:name=".activity.ChangeProfileActivity" />
     </application>
 
 </manifest>
