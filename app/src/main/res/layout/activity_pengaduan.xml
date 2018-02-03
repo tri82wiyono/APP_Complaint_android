@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.meridianid.farizdotid.mahasiswaapp.activity.PengaduanActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+        <ImageView
+            android:id="@+id/btnCamera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_linked_camera_black_24dp"/>
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="551dp"
+        android:id="@+id/tvResultNama"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+</RelativeLayout>

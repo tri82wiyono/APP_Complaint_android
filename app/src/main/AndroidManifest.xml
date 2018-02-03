@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_bs"
         android:label="PT.BankSUMUT"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -31,6 +31,7 @@
         <activity android:name=".activity.KantorActivity" />
         <activity android:name=".activity.ATMActivity" />
         <activity android:name=".activity.ChangeProfileActivity" />
+        <activity android:name=".activity.PengaduanActivity" />
     </application>
 
 </manifest>

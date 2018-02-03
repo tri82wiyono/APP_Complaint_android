@@ -3,67 +3,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
+    android:background="@color/backgroundcolor"
     tools:context="com.meridianid.farizdotid.mahasiswaapp.activity.LoginActivity">
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logobs"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:padding="16dp"
+        android:padding="20dp"
         android:orientation="vertical">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="24sp"
-            android:textColor="#fff"
+            android:layout_gravity="left"
+            android:textSize="20sp"
+            android:textColor="#383737"
             android:fontFamily="sans-serif"
-            android:text="LOGIN"/>
-
+            android:text="Email"/>
         <EditText
             android:id="@+id/etEmail"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textColorHint="#80FFFFFF"
             android:padding="8dp"
             android:inputType="textEmailAddress"
-            android:background="@drawable/bg_rectangle_edittext"
-            android:textColor="#80FFFFFF"/>
-
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:textColor="#383737"
+            android:fontFamily="sans-serif"
+            android:text="Password"/>
         <EditText
             android:id="@+id/etPassword"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textColorHint="#80FFFFFF"
+            android:textColorHighlight="#000000"
             android:inputType="textPassword"
             android:padding="8dp"
-            android:background="@drawable/bg_rectangle_edittext"
-            android:textColor="#80FFFFFF"/>
+            android:textColor="#000000"/>
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#FFF"
-            android:text="LOG IN"
-            android:background="@drawable/bg_rectangle_button"/>
-
-        <TextView
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#FFF"
-            android:fontFamily="cursive"
-            android:text="OR"
-            android:layout_gravity="center"/>
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_rectangle_button"
+            android:text="MASUK"
+            android:textColor="#FFF" />
 
         <Button
             android:id="@+id/btnRegister"
@@ -71,7 +69,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFF"
-            android:text="REGISTER"
-            android:background="@drawable/bg_rectangle_button"/>
+            android:text="DAFTAR"
+            android:background="@drawable/bg_rectangel_button_daftar"/>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+
 </RelativeLayout>

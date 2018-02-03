@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     CardView btnATM;
     @BindView(R.id.btnCallCenter)
     CardView btnCallCenter;
+    @BindView(R.id.btnPengaduan)
+    CardView btnPengaduan;
 
 
     SharedPrefManager sharedPrefManager;
@@ -96,6 +98,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ATMActivity.class));
             }
         });
+
+        btnPengaduan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PengaduanActivity.class));
+            }
+        });
+
         btnCallCenter.setOnClickListener(new View.OnClickListener() {
             String phoneNumber = "14002";
             public void onClick(View v) {
