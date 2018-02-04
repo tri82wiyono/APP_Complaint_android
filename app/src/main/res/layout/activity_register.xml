@@ -3,8 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundcolor"
     tools:context="com.meridianid.farizdotid.mahasiswaapp.activity.RegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_dua"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/bluebs"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:elevation="4dp">
+        <ImageView
+            android:id="@+id/btnBackLogin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,59 +29,64 @@
         android:layout_centerInParent="true"
         android:padding="16dp"
         android:orientation="vertical">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="24sp"
-            android:textColor="#fff"
+            android:layout_gravity="left"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:textColor="#403f3f"
             android:fontFamily="sans-serif"
-            android:text="REGISTER"/>
-
+            android:text="Nama"/>
         <EditText
             android:id="@+id/etNama"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama"
-            android:textColorHint="#80FFFFFF"
             android:padding="8dp"
             android:inputType="textPersonName"
-            android:background="@drawable/bg_rectangle_edittext"
-            android:textColor="#80FFFFFF"/>
-
+            android:textColor="#403f3f"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="left"
+            android:textSize="20sp"
+            android:textColor="#403f3f"
+            android:fontFamily="sans-serif"
+            android:text="Email"/>
         <EditText
             android:id="@+id/etEmail"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textColorHint="#80FFFFFF"
             android:padding="8dp"
             android:inputType="textEmailAddress"
-            android:background="@drawable/bg_rectangle_edittext"
-            android:textColor="#80FFFFFF"/>
-
+            android:textColor="#403f3f"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="left"
+            android:textSize="20sp"
+            android:textColor="#403f3f"
+            android:fontFamily="sans-serif"
+            android:text="Password"/>
         <EditText
             android:id="@+id/etPassword"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textColorHint="#80FFFFFF"
             android:inputType="textPassword"
             android:padding="8dp"
-            android:background="@drawable/bg_rectangle_edittext"
-            android:textColor="#80FFFFFF"/>
-
+            android:textColor="#FFF"/>
         <Button
             android:id="@+id/btnRegister"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFF"
-            android:text="REGISTER"
+            android:text="DAFTAR"
             android:background="@drawable/bg_rectangle_button"/>
 
     </LinearLayout>

@@ -3,12 +3,14 @@ package com.meridianid.farizdotid.mahasiswaapp.activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.meridianid.farizdotid.mahasiswaapp.R;
@@ -33,6 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
     @BindView(R.id.etEmail) EditText etEmail;
     @BindView(R.id.etPassword) EditText etPassword;
     @BindView(R.id.btnRegister) Button btnRegister;
+    @BindView(R.id.btnBackLogin) ImageView btnBackLogin;
     ProgressDialog loading;
 
     Context mContext;
@@ -47,6 +50,16 @@ public class RegisterActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mContext = this;
         mApiService = UtilsApi.getAPIService();
+
+
+        //link kembali ke halaman lohin
+        btnBackLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            }
+        });
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
