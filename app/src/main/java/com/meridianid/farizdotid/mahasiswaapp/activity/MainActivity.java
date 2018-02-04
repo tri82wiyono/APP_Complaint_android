@@ -110,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
             String phoneNumber = "14002";
             public void onClick(View v) {
                 Intent dialPhoneIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phoneNumber));
-                //startActivity(new Intent(MainActivity.this, ATMActivity.class));
                 startActivity(dialPhoneIntent);
             }
         });

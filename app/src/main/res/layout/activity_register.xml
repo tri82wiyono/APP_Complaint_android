@@ -8,19 +8,16 @@
     tools:context="com.meridianid.farizdotid.mahasiswaapp.activity.RegisterActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_dua"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:minHeight="?attr/actionBarSize"
         android:background="@color/bluebs"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        app:logo="@drawable/ic_arrow_back_black_24dp"
+        app:logoDescription="LOGO KEMBALI"
         android:elevation="4dp">
-        <ImageView
-            android:id="@+id/btnBackLogin"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_arrow_back_black_24dp"/>
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout

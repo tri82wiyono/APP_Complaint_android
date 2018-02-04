@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     @BindView(R.id.etEmail) EditText etEmail;
     @BindView(R.id.etPassword) EditText etPassword;
     @BindView(R.id.btnRegister) Button btnRegister;
-    @BindView(R.id.btnBackLogin) ImageView btnBackLogin;
+    @BindView(R.id.toolbar) Toolbar toolbar;
     ProgressDialog loading;
 
     Context mContext;
@@ -47,13 +48,14 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 //        getSupportActionBar().hide();
 
+
         ButterKnife.bind(this);
         mContext = this;
         mApiService = UtilsApi.getAPIService();
 
 
         //link kembali ke halaman lohin
-        btnBackLogin.setOnClickListener(new View.OnClickListener() {
+        toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
@@ -65,13 +67,10 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (etNama.getText().toString().length() == 0) {
-                    //jika form Nama belum di isi / masih kosong
                     etNama.setError("Nama Tidak Boleh Kosong!");
                 } else if (etEmail.getText().toString().length() == 0) {
-                    //jika form Email belum di isi / masih kosong
                     etEmail.setError("Email Tidak Boleh Kosong!");
                 } else if (etPassword.getText().toString().length() == 0) {
-                    //jika form Password belum di isi / masih kosong
                     etPassword.setError("Password Tidak Boleh Kosong!");
                 } else {
                     loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
